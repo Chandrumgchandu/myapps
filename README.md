@@ -9,8 +9,7 @@ This is a supporting lab repository. It is intentionally small and should be vie
 ```text
 Jenkinsfile      Declarative Jenkins pipeline
 index.html       Simple static file used as a change target
-test.txt         Webhook test marker
-frontend         Git submodule/reference entry
+frontend         Existing Git submodule/reference entry
 ```
 
 ## What this demonstrates
@@ -26,6 +25,10 @@ frontend         Git submodule/reference entry
 GitHub change -> Jenkins webhook -> Pipeline starts -> Workspace listed -> Success message
 ```
 
+## Cleanup note
+
+The old timestamp-only webhook marker file was removed because it did not add portfolio value. The remaining files are kept only to show the webhook lab flow.
+
 ## Portfolio role
 
 This repository supports the CI/CD learning trail. It should sit behind stronger resume-facing repos such as:
@@ -33,11 +36,3 @@ This repository supports the CI/CD learning trail. It should sit behind stronger
 - [employee-portal](https://github.com/Chandrumgchandu/employee-portal)
 - [todo_app_jenkins](https://github.com/Chandrumgchandu/todo_app_jenkins)
 - [devops-lab](https://github.com/Chandrumgchandu/devops-lab)
-
-## Notes
-
-The `frontend` entry is a Git submodule/reference. If this repo is cloned locally and the reference is needed, initialize submodules with:
-
-```bash
-git submodule update --init --recursive
-```
